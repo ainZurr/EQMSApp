@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="EQMSApp.View.UserControls.IdentityTextbox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EQMSApp.View.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="37" d:DesignWidth="200">
+    <Grid>
+        <Border Background="#80C0C0C0" CornerRadius="12">
+            <TextBox x:Name="txtInput" VerticalContentAlignment="Center" FontSize="14" FontWeight="Light" Margin="13 0 0 0" Padding="27.5 0 0 0" 
+                 TextChanged="txtInput_TextChanged">
+            <TextBox.Background>
+                <ImageBrush ImageSource="{Binding DisplayedImagePath}"
+                                 Stretch="None"
+                                 AlignmentX="Left"/>
+            </TextBox.Background>
+        </TextBox>
+        </Border>
+        <TextBlock x:Name="tbPlaceholder" Text="{Binding Placeholder}" VerticalAlignment="Center" FontSize="14" FontWeight="Light" Foreground="#575757" Margin="8 0 0 0 " Padding="33 0 0 0" Panel.ZIndex="-1"/>
+    </Grid>
+</UserControl>
